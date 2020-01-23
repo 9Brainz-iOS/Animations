@@ -9,7 +9,7 @@ This is easy to use demo about UIView Basic Animations with code held in one fil
 2. Animations can improve the overall user experience of your app. In this tutorial, we will show you how to create simple view animations in Swift
 
 
-**Output**
+# Output
 
 ![](https://media.giphy.com/media/YOFnArU1RHCaZk3vR6/giphy.gif)
 
