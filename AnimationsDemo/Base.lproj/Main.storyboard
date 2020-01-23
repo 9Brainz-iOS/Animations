@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aSD-zO-mqv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="XLT-3I-Iir">
+            <objects>
+                <viewController id="aSD-zO-mqv" customClass="ViewController" customModule="basicAnimationsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iEw-zJ-e0J"/>
+                        <viewControllerLayoutGuide type="bottom" id="cIO-G5-j3p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pvg-ql-xXp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6N-bz-Ke0">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aSD-zO-mqv" id="xqR-g1-Poe"/>
+                                    <outlet property="delegate" destination="aSD-zO-mqv" id="AqJ-kA-pP0"/>
+                                </connections>
+                            </pickerView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ged-sG-EOk" userLabel="Container">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4I-eQ-avo" userLabel="Content">
+                                        <rect key="frame" x="132" y="248" width="150" height="150"/>
+                                        <color key="backgroundColor" red="0.7297880876432854" green="0.62632892363527082" blue="0.78934010152284273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="ccQ-0f-fEo"/>
+                                            <constraint firstAttribute="height" constant="150" id="pTZ-uC-654"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leN-OI-DY3">
+                                        <rect key="frame" x="8" y="598" width="398" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="398" id="8im-Iz-JGc"/>
+                                            <constraint firstAttribute="height" constant="48" id="wwk-L2-cN5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="25"/>
+                                        <color key="tintColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="press"/>
+                                        <connections>
+                                            <action selector="startButtonPressed:" destination="aSD-zO-mqv" eventType="touchUpInside" id="rrF-QY-MPe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="leN-OI-DY3" secondAttribute="bottom" id="5NU-An-s2q"/>
+                                    <constraint firstItem="H4I-eQ-avo" firstAttribute="centerX" secondItem="ged-sG-EOk" secondAttribute="centerX" id="PTe-JJ-rQF"/>
+                                    <constraint firstItem="H4I-eQ-avo" firstAttribute="centerY" secondItem="ged-sG-EOk" secondAttribute="centerY" id="l9Q-KI-lHN"/>
+                                    <constraint firstItem="leN-OI-DY3" firstAttribute="centerX" secondItem="ged-sG-EOk" secondAttribute="centerX" id="oCd-fR-vyO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ged-sG-EOk" firstAttribute="top" secondItem="pvg-ql-xXp" secondAttribute="top" id="Amq-nK-jmX"/>
+                            <constraint firstItem="C6N-bz-Ke0" firstAttribute="top" secondItem="ged-sG-EOk" secondAttribute="bottom" id="BX9-oz-8xJ"/>
+                            <constraint firstItem="cIO-G5-j3p" firstAttribute="top" secondItem="C6N-bz-Ke0" secondAttribute="bottom" id="E9q-67-hgm"/>
+                            <constraint firstAttribute="trailing" secondItem="C6N-bz-Ke0" secondAttribute="trailing" id="Xwi-jv-w8C"/>
+                            <constraint firstItem="ged-sG-EOk" firstAttribute="leading" secondItem="pvg-ql-xXp" secondAttribute="leading" id="d8a-Sf-W20"/>
+                            <constraint firstItem="C6N-bz-Ke0" firstAttribute="leading" secondItem="pvg-ql-xXp" secondAttribute="leading" id="iIv-pJ-1lS"/>
+                            <constraint firstAttribute="trailing" secondItem="ged-sG-EOk" secondAttribute="trailing" id="n34-te-DaR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cQ0-aw-uyX"/>
+                    </view>
+                    <connections>
+                        <outlet property="animatedView" destination="H4I-eQ-avo" id="fuT-3a-bha"/>
+                        <outlet property="startButton" destination="leN-OI-DY3" id="FOT-ak-aJJ"/>
+                        <outlet property="typePicker" destination="C6N-bz-Ke0" id="pU1-jT-5fP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJK-9I-1Zl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182.60869565217394" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>
